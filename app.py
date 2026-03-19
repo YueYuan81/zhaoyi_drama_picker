@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 # 页面配置
-st.set_page_config(page_title="赵毅主役剧抽签", page_icon="🎙️")
+st.set_page_config(page_title="船长赵毅主役剧抽签", page_icon="🎙️")
 
 # 完整作品数据
 DRAMA_DATA = [
@@ -23,7 +23,7 @@ if 'history' not in st.session_state:
 if 'listened' not in st.session_state:
     st.session_state.listened = [] # 记录用户勾选已听的剧
 
-st.title("🎧 赵毅主役广播剧抽签")
+st.title("🎧 船长赵毅主役剧抽签")
 st.caption("注：抽中过的剧出现概率会降低；勾选“已听”后不再抽到。")
 
 # --- 侧边栏：用户记录功能 ---
@@ -54,7 +54,7 @@ if st.button("🎲 开始抽取", type="primary", use_container_width=True):
         weights = []
         for d in available_pool:
             if d[0] in st.session_state.history:
-                weights.append(1)  # 降低概率
+                weights.append(5)  # 降低概率
             else:
                 weights.append(10) # 正常概率
         

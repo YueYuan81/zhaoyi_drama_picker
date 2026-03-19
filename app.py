@@ -45,7 +45,7 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 
 st.title("🎧 船长赵毅主役剧抽签")
-st.caption("注：记录保存在您的浏览器中；抽中过的剧概率降低；勾选“已听”后不再抽到。")
+st.caption("注：抽中过的剧概率降低；勾选“已听”后不再抽到。")
 
 # --- 侧边栏：用户记录功能 ---
 with st.sidebar:
